@@ -27,6 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { AddnotesComponent } from './addnotes/addnotes.component';
 import { GroupsListComponent } from './groups-list/groups-list.component';
+import { HttpClientModule } from '@angular/common/http';
+
 //import { AddnotesComponent } from './addnotes/addnotes.component';
 
 
@@ -62,7 +64,8 @@ import { GroupsListComponent } from './groups-list/groups-list.component';
     FormsModule,
     MatDialogModule,
     ReactiveFormsModule,
-    ScrollingModule
+    ScrollingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

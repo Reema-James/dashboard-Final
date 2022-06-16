@@ -1,5 +1,4 @@
-export interface Group {
-    id: string;
+export interface Note {
     title: string;
     description : string;
   }

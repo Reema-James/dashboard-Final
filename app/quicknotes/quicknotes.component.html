@@ -1,41 +1,21 @@
-<mat-card>
-  <mat-card-actions>
-    <button mat-button (click)="openDialogBox()">Create Note</button>
-  </mat-card-actions>
-</mat-card>
+<div>
+  <mat-card >
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialogBox()">Create Note</button>
+    </mat-card-actions>
 
-
-
-<mat-card class="notes">
-  <div #addnotes>
-  <mat-card-title>{{title}}</mat-card-title>
-  <mat-card-content>{{description}}</mat-card-content>
-</div>
-  <mat-divider inset></mat-divider>
-  <mat-card-actions>
-    <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button class="edit-button" mat-button>Edit</button>
-    <button mat-button>Delete</button>
-  </mat-card-actions>
-  </mat-card>
-
-
-
-<!-- <div class="example-container">
-    <mat-form-field> <input matInput
-      [(ngModel)]="titleModel" placeholder="Title"> </mat-form-field>
-    <br>
-    <mat-form-field> <input matInput [(ngModel)]="contentModel" placeholder="Enter your content"> </mat-form-field>
-    <br>
+      <p *ngFor="let note of noteList">
+        <mat-card class="card" *ngIf="noteList.length">
+          <mat-card-title>{{note.title}}</mat-card-title>
+          <mat-card-content>{{note.description}}</mat-card-content>
+          <mat-card-actions>
+            <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+              <button mat-raised-button color="primary">Edit</button>
+              <button mat-raised-button color="primary">Delete</button>
+            </mat-card-actions>
+        </mat-card>
+      </p>
+    </mat-card>
   </div>
-  <br>
-
-  <button class="button" mat-raised-button (click)="createQuicknotes()">Add Note</button>
-  <hr>
-
-  <p *ngFor="let i of quicknotes">
-    <mat-card-title> {{ i.title }} </mat-card-title>
-    <mat-card> {{ i.content }} </mat-card>
-  </p> -->

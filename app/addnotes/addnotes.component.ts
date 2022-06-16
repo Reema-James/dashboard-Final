@@ -18,7 +18,7 @@ export interface DialogData {
 export class AddnotesComponent {
   AddnotesForm: FormGroup;
   constructor (private formBuilder: FormBuilder, private dialogRef:MatDialogRef<AddnotesComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    // @Inject(MAT_DIALOG_DATA) public data: DialogData,
     // private notesService: NotesService
     )
   {

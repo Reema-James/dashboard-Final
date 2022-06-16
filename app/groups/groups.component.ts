@@ -17,7 +17,7 @@ export interface DialogData {
 export class GroupsComponent {
   addGroupForm: FormGroup;
   display= true;
-  constructor(private formBuilder: FormBuilder, private dialogRef:MatDialogRef<GroupsComponent>)  
+  constructor(private formBuilder: FormBuilder,private api: ApiService, private dialogRef:MatDialogRef<GroupsComponent>)  
   {
         this.addGroupForm = this.formBuilder.group({
         title: new FormControl('', Validators.required),
@@ -25,11 +25,12 @@ export class GroupsComponent {
           })
   }
 
-  // addGroup()
-  // {
-  //   this.api.postdata(this.addGroupForm.value).subscribe();
-  // }
-// private api: ApiService,
+
+  addGrp(): void
+  {
+    this.api.postdata(this.addGroupForm.value).subscribe();
+  }
+
   onNoClick(): void {
     this.dialogRef.close();
   }
